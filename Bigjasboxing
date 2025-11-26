@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BigJasBoxing | Jasmine Hampton</title>
+  <meta name="description" content="Jasmine Hampton — Boxer, Coach, Volunteer. Sponsorship & portfolio." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="#">BigJasBoxing</a>
+      <nav id="nav">
+        <button id="nav-toggle" aria-label="Open menu">☰</button>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#sponsors">Sponsorship</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <h1>Jasmine "Big Jas" Hampton</h1>
+        <p class="lead">Professional Boxer • Youth Mentor • Community Coach</p>
+        <div class="hero-ctas">
+          <a href="#sponsors" class="btn">Become a Sponsor</a>
+          <a href="#contact" class="btn btn-alt">Contact Me</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="container about">
+      <div class="about-text">
+        <h2>About</h2>
+        <p>Hi — I’m Jasmine Hampton. I compete as a professional boxer and volunteer with local youth programs. I’m building a team of sponsors to help with travel, training, and community outreach.</p>
+        <ul class="quick-facts">
+          <li><strong>Location:</strong> Michigan</li>
+          <li><strong>Role:</strong> Boxer, Coach</li>
+          <li><strong>Contact:</strong> <a href="mailto:jasmine.hampton5@snhu.edu">jasmine.hampton5@snhu.edu</a></li>
+        </ul>
+      </div>
+      <div class="about-photo">
+        <img src="assets/profile.jpg" alt="Jasmine Hampton boxing" />
+      </div>
+    </section>
+
+    <section id="gallery" class="container gallery">
+      <h2>Gallery</h2>
+      <p class="muted">Click to enlarge</p>
+      <div class="gallery-grid">
+        <img src="assets/img1.jpg" alt="Action photo 1" class="gallery-item" />
+        <img src="assets/img2.jpg" alt="Action photo 2" class="gallery-item" />
+        <img src="assets/img3.jpg" alt="Action photo 3" class="gallery-item" />
+        <img src="assets/img4.jpg" alt="Action photo 4" class="gallery-item" />
+      </div>
+    </section>
+
+    <section id="sponsors" class="container sponsors">
+      <h2>Become a Sponsor</h2>
+      <p>I offer tailored sponsorship packages to fit brand goals and community impact. Below are example tiers — I’ll send a professional sponsorship packet on request.</p>
+
+      <div class="tier-grid">
+        <div class="tier">
+          <h3>Bronze</h3>
+          <p>$250 — Logo on social posts, shout-out</p>
+          <ul>
+            <li>Social media mentions</li>
+            <li>Logo credit</li>
+          </ul>
+          <a class="btn" href="mailto:jasmine.hampton5@snhu.edu?subject=Sponsorship%20Inquiry%20(Bronze)">Inquire</a>
+        </div>
+
+        <div class="tier">
+          <h3>Silver</h3>
+          <p>$750 — More exposure + event presence</p>
+          <ul>
+            <li>Logo on banner</li>
+            <li>Event appearance</li>
+          </ul>
+          <a class="btn" href="mailto:jasmine.hampton5@snhu.edu?subject=Sponsorship%20Inquiry%20(Silver)">Inquire</a>
+        </div>
+
+        <div class="tier">
+          <h3>Gold</h3>
+          <p>$2,500 — Title sponsor + promotional package</p>
+          <ul>
+            <li>Title sponsor at events</li>
+            <li>Branded gear</li>
+          </ul>
+          <a class="btn" href="mailto:jasmine.hampton5@snhu.edu?subject=Sponsorship%20Inquiry%20(Gold)">Inquire</a>
+        </div>
+      </div>
+
+      <p class="small">Download the sponsorship packet: <a href="assets/sponsorship_packet.pdf" download>Download PDF</a> (replace with your final PDF)</p>
+    </section>
+
+    <section id="contact" class="container contact">
+      <h2>Contact</h2>
+      <p>If you'd like to book, sponsor, or collaborate — send an email or use the quick form below.</p>
+
+      <form class="contact-form" action="mailto:jasmine.hampton5@snhu.edu" method="get" enctype="text/plain">
+        <label>Name <input type="text" name="Name" required /></label>
+        <label>Email <input type="email" name="Email" required /></label>
+        <label>Message <textarea name="Message" rows="4" required></textarea></label>
+        <button class="btn" type="submit">Send Email</button>
+      </form>
+
+      <div class="social">
+        <p>Follow on social media:</p>
+        <a href="#" aria-label="Instagram">Instagram</a> ·
+        <a href="#" aria-label="Facebook">Facebook</a> ·
+        <a href="#" aria-label="YouTube">YouTube</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Jasmine Hampton — BigJasBoxing</p>
+    </div>
+  </footer>
+
+  <div id="lightbox" class="lightbox hidden" aria-hidden="true">
+    <button id="lb-close" class="lb-close" aria-label="Close">✕</button>
+    <img id="lb-img" src="" alt="" />
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+:root{
+  --max-width:1100px;
+  --accent:#d44;
+  --bg:#fafafa;
+  --text:#111;
+  --muted:#666;
+  --card-bg:#fff;
+  --radius:12px;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: system-ui,-apple-system,"Segoe UI",Roboto, "Helvetica Neue", Arial;
+  color:var(--text);
+  background:var(--bg);
+  -webkit-font-smoothing:antialiased;
+}
+
+.container{
+  max-width:var(--max-width);
+  margin:0 auto;
+  padding:1rem;
+}
+
+.site-header{
+  background:#fff;
+  border-bottom:1px solid #ececec;
+  position:sticky;
+  top:0;
+  z-index:40;
+}
+.site-header .container{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:1rem;
+}
+.logo{font-weight:700; font-size:1.1rem; text-decoration:none; color:var(--text)}
+nav{display:flex;align-items:center;gap:1rem}
+#nav-toggle{display:none; background:transparent; border:0; font-size:1.2rem}
+.nav-links{list-style:none; display:flex; gap:1rem; margin:0; padding:0}
+.nav-links a{color:var(--text); text-decoration:none; padding:.5rem .6rem; border-radius:8px}
+.nav-links a:hover{background:#f2f2f2}
+
+.hero{
+  background: linear-gradient(180deg, rgba(212,68,72,0.06), transparent 60%), url('assets/hero.jpg') center/cover no-repeat;
+  padding:3.2rem 0;
+}
+.hero-inner{display:flex; flex-direction:column; gap:.6rem; align-items:flex-start}
+.hero h1{margin:0; font-size:2.25rem}
+.lead{color:var(--muted); margin:0 0 1rem}
+
+.btn{
+  display:inline-block;
+  background:var(--accent);
+  color:#fff;
+  padding:.6rem 1rem;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:600;
+}
+.btn:hover{opacity:.95}
+.btn-alt{background:#333; margin-left:.5rem}
+
+.about{
+  display:grid;
+  grid-template-columns:1fr 320px;
+  gap:1.6rem;
+  align-items:center;
+  padding:2rem 0;
+  background:transparent;
+}
+.about-photo img{width:100%; max-width:320px; border-radius:12px; display:block; object-fit:cover}
+
+.gallery{padding:1rem 0}
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:.6rem;
+}
+.gallery-item{width:100%; display:block; border-radius:8px; cursor:pointer; object-fit:cover; height:160px}
+
+.sponsors{padding:1.2rem 0}
+.tier-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:1rem}
+.tier{background:var(--card-bg); padding:1rem; border-radius:12px; box-shadow:0 1px 4px rgba(0,0,0,0.04)}
+.small{font-size:.9rem; color:var(--muted)}
+
+.contact{padding:1.2rem 0}
+.contact-form{display:grid; gap:.6rem; max-width:520px}
+.contact-form label{display:block}
+.contact-form input, .contact-form textarea{
+  width:100%; padding:.6rem; border-radius:8px; border:1px solid #e6e6e6; background:#fff;
+}
+.site-footer{background:#fff; border-top:1px solid #eee; padding:.8rem 0; margin-top:2rem}
+.muted{color:var(--muted)}
+
+.lightbox{position:fixed; inset:0; display:flex; align-items:center; justify-content:center; background:rgba(0,0,0,0.75); z-index:80}
+.lightbox img{max-width:92%; max-height:80%; border-radius:8px}
+.lb-close{position:absolute; top:1rem; right:1rem; background:transparent; border:0; color:#fff; font-size:1.4rem}
+
+.hidden{display:none}
+
+/* Responsive */
+@media (max-width:900px){
+  .about{grid-template-columns:1fr}
+  .gallery-grid{grid-template-columns:repeat(2,1fr)}
+  .tier-grid{grid-template-columns:1fr}
+  #nav-toggle{display:inline-block}
+  .nav-links{position:absolute; right:1rem; top:64px; background:#fff; padding:0.5rem; border-radius:8px; flex-direction:column; display:none; box-shadow:0 12px 30px rgba(0,0,0,0.06)}
+  .nav-links.show{display:flex}
+}
+@media (max-width:480px){
+  .hero h1{font-size:1.6rem}
+  .gallery-item{height:120px}
+  .about-photo img{max-width:100%}
+}
+// Small site JS: nav toggle, year, gallery lightbox + smooth scroll
+document.addEventListener('DOMContentLoaded', function(){
+  // year
+  const yr = document.getElementById('year');
+  if(yr) yr.textContent = new Date().getFullYear();
+
+  // nav toggle
+  const navToggle = document.getElementById('nav-toggle');
+  const navLinks = document.getElementById('nav-links');
+  navToggle && navToggle.addEventListener('click', ()=> navLinks.classList.toggle('show'));
+
+  // smooth scroll for internal links
+  document.querySelectorAll('a[href^="#"]').forEach(a=>{
+    a.addEventListener('click', function(e){
+      const target = document.querySelector(this.getAttribute('href'));
+      if(target){ e.preventDefault(); target.scrollIntoView({behavior:'smooth', block:'start'}); navLinks.classList.remove('show'); }
+    });
+  });
+
+  // simple lightbox for gallery
+  const lightbox = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lb-img');
+  const lbClose = document.getElementById('lb-close');
+
+  document.querySelectorAll('.gallery-item').forEach(img=>{
+    img.addEventListener('click', e=>{
+      lbImg.src = e.currentTarget.src;
+      lbImg.alt = e.currentTarget.alt || '';
+      lightbox.classList.remove('hidden');
+      lightbox.setAttribute('aria-hidden','false');
+    });
+  });
+
+  lbClose && lbClose.addEventListener('click', ()=> {
+    lightbox.classList.add('hidden');
+    lightbox.setAttribute('aria-hidden','true');
+    lbImg.src = '';
+  });
+
+  lightbox && lightbox.addEventListener('click', (e)=>{
+    if(e.target === lightbox) { lbClose.click(); }
+  });
+});
+# BigJasBoxing — Website
+
+Files:
+- index.html
+- styles.css
+- script.js
+- /assets/ (place images: profile.jpg, hero.jpg, img1.jpg... and sponsorship_packet.pdf)
+
+To preview locally:
+1. Place files in one folder.
+2. Open `index.html` in your browser.
+
+Deploy:
+- GitHub Pages: push to a repo and enable Pages from the repository settings (branch `main` / folder `root`).
+- Netlify: drag-and-drop the folder into Netlify Drop (free) or connect GitHub for auto-deploys.
+
+Replace placeholder images and the PDF at `assets/sponsorship_packet.pdf`.
+bigjasboxing/
+  index.html
+  styles.css
+  script.js
+  README.md
+  assets/
+    profile.jpg
+    hero.jpg
+    img1.jpg
+    img2.jpg
+    img3.jpg
+    img4.jpg
+    sponsorship_packet.pdf
